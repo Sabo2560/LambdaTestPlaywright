@@ -1,29 +1,49 @@
-# Playwright LambdaTest Project
+# LambdaTest E-commerce Playground Playwright Test Suite
 
-This project contains Playwright tests for the LambdaTest certification assignment.
+This repository contains a Playwright test suite for the LambdaTest E-commerce Playground application.
 
-## Prerequisites
+## Project Selection
 
-*   Node.js
-*   npm
-*   A LambdaTest account with a username and access key
+I selected the LambdaTest E-commerce Playground because it is a feature-rich web application with both frontend and backend components, making it an ideal candidate for demonstrating a comprehensive testing approach. It includes user authentication, product browsing, a shopping cart, and a checkout process, which are all critical user flows in an e-commerce application.
 
-## Setup
+## How to Set Up and Run the Tests
 
-1.  Clone the repository.
-2.  Install the dependencies:
-    ```bash
-    npm install
-    ```
-3.  Create a `.env` file in the root of the project and add your LambdaTest credentials:
-    ```
-    LT_USERNAME="YOUR_USERNAME"
-    LT_ACCESS_KEY="YOUR_ACCESS_KEY"
-    ```
+### Prerequisites
+- Node.js (v16 or higher)
+- npm
 
-## Running the Tests
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Sabo2560/LambdaTestPlaywright.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd LambdaTestPlaywright
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Install the Playwright browsers:
+   ```bash
+   npx playwright install
+   ```
 
-To run the tests on LambdaTest, use the following command:
-
+### Running the Tests
+To run the tests, use the following command:
 ```bash
-npx playwright test --config=lambdatest-playwright.config.ts
+npx playwright test
+```
+
+This will run all the tests in the `tests` directory.
+
+To view the test report, use the following command:
+```bash
+npx playwright show-report
+```
+
+## Assumptions and Modifications
+- The tests are designed to be run against the live LambdaTest E-commerce Playground application.
+- The tests do not currently use any mock data or a dedicated test database.
+- The tests are designed to be run in a clean state (e.g., no items in the cart).
